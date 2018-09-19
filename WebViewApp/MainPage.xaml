@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:WebViewApp" 
+             x:Class="WebViewApp.MainPage">
+    <StackLayout>
+        <StackLayout.Margin>
+            <OnPlatform x:TypeArguments="Thickness" iOS="0,40,0,0" Android="0" />
+        </StackLayout.Margin>
+        <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+            <Button x:Name="backButton" Image="baseline_arrow_back_black_24" BackgroundColor="Transparent" 
+                    HorizontalOptions="StartAndExpand" Clicked="BackButton_Clicked"/>
+            <ActivityIndicator x:Name="loadingIndicator" HorizontalOptions="Center" IsRunning="false" IsVisible="false"/>
+            <Button x:Name="forwardButton" Image="baseline_arrow_forward_black_24" BackgroundColor="Transparent" 
+                    HorizontalOptions="EndAndExpand" Clicked="ForwardButton_Clicked"/>
+            <!-- <Button x:Name="refreshButton" Image="baseline_refresh_black_24" Clicked="RefreshButton_Clicked"/> -->
+        </StackLayout>
+        <WebView x:Name="webView" Source="http://www.xamarin.com" WidthRequest="1000" HeightRequest="1000"
+                 Navigated="Handle_Navigated" Navigating="Handle_Navigating"/>
+    </StackLayout>
+</ContentPage>
