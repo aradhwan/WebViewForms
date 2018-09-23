@@ -11,9 +11,9 @@
             <Button x:Name="backButton" Image="baseline_arrow_back_black_24" BackgroundColor="Transparent" 
                     HorizontalOptions="StartAndExpand" Clicked="BackButton_Clicked"/>
             <ActivityIndicator x:Name="loadingIndicator" HorizontalOptions="Center" IsRunning="false" IsVisible="false"/>
+            <Button x:Name="refreshButton" Image="baseline_refresh_black_24" BackgroundColor="Transparent" HorizontalOptions="Center" IsVisible="true" Clicked="RefreshButton_Clicked"/>
             <Button x:Name="forwardButton" Image="baseline_arrow_forward_black_24" BackgroundColor="Transparent" 
                     HorizontalOptions="EndAndExpand" Clicked="ForwardButton_Clicked"/>
-            <!-- <Button x:Name="refreshButton" Image="baseline_refresh_black_24" Clicked="RefreshButton_Clicked"/> -->
         </StackLayout>
         <WebView x:Name="webView" Source="http://www.xamarin.com" WidthRequest="1000" HeightRequest="1000"
                  Navigated="Handle_Navigated" Navigating="Handle_Navigating"/>
